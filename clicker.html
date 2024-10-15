@@ -1,0 +1,38 @@
+<html>
+
+<head>
+    <style>
+        div {
+            text-align: center;
+            margin-left: 200px;
+            margin-right: 200px;
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-top: 150px;
+        }
+
+        .red {
+            background-color: lightslategray;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="red">
+        <img id = "image" src="https://upload.wikimedia.org/wikipedia/en/c/cd/Castiel_%28supernatural%29.jpg">
+        <p id="score"> Times Saved Dean: </p>
+    </div>
+    <p>
+</body>
+
+</html>
+<script>
+    document.getElementById("image").addEventListener("click", up)
+    var score = 0
+    function up() {
+        score = score + 1
+        document.getElementById("score").innerHTML = " Times Saved Dean: " + score
+        console.log(score)
+    }
+</script>
