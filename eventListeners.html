@@ -1,0 +1,36 @@
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <img id="cat"
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Cat_August_2010-4.jpg/181px-Cat_August_2010-4.jpg">
+        <p id = "kiki"> Dunk on them </p>
+        <p id = "koko"> 1 </p>
+
+</body>
+
+</html>
+<script>
+    document.getElementById("cat").addEventListener("click", lol)
+    function lol() {
+        alert("cat!")
+    }
+    function colorChange () {
+    document.getElementById("kiki").style.color = "pink"
+    }
+    document.getElementById("kiki").addEventListener ("click", colorChange)
+    function hovergang () {
+        document.getElementById("cat").style.width = "34px"
+        }
+    document.getElementById("cat").addEventListener ("mouseover", hovergang)
+    document.getElementById("koko").addEventListener("click", up)
+    function up(){
+        score = score + 1
+        document.getElementById("koko").innerHTML=score
+        console.log(score)
+    }
+    
+</script>

@@ -22,6 +22,7 @@
     <div class="red">
         <img id = "image" src="https://upload.wikimedia.org/wikipedia/en/c/cd/Castiel_%28supernatural%29.jpg">
         <p id="score"> Times Saved Dean: </p>
+        <button id = "chicken"> Upgrade's Cost: 5</button>
     </div>
     <p>
 </body>
@@ -31,8 +32,25 @@
     document.getElementById("image").addEventListener("click", up)
     var score = 0
     function up() {
-        score = score + 1
+        score = score + click
         document.getElementById("score").innerHTML = " Times Saved Dean: " + score
         console.log(score)
     }
+    var click = 1
+    var cost = 5
+    function poopoo() {
+        if (score>=cost){
+            click=click+1
+            score = score-cost
+            cost = cost * 2
+            document.getElementById("score").innerHTML = " Times Saved Dean: " + score
+            document.getElementById("chicken").innerHTML = "Upgrade cost : " + cost
+        }
+        else{
+        alert("Will he die again?")    
+        }
+        
+    }
+
+    document.getElementById("chicken").addEventListener("click",poopoo)
 </script>
