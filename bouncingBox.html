@@ -10,9 +10,7 @@
                 top: 100px;
                 left: 100px;
             }
-            body {
-                
-            }
+            
         </style>
 
     </head>
@@ -25,14 +23,33 @@
 </html>
 <script>
     var leftVarible = 5;
+    var speed = 5;
     document.getElementById("box").addEventListener("click", moveBox)
-    setInterval(moveBox,100); 
+    setInterval(moveBox,16); 
     function moveBox () {
-         leftVarible = leftVarible + 5;
          document.getElementById("box").style.left = 100 + leftVarible + "px"
+    leftVarible = leftVarible + speed
+    if(leftVarible >= 1000){
+        speed = -10
     }
+    if (leftVarible === 0){speed = 20}
     
+}
+var rightVarible = 5;
+    var speedY = 5;
+    document.getElementById("box").addEventListener("click", moveBox)
+    setInterval(moveBoxY,50); 
+    function moveBoxY () {
+         document.getElementById("box").style.top = 100 + rightVarible + "px"
+    rightVarible = rightVarible + speedY
+    if(rightVarible >= 1000){
+        speedY = -5
+    }
+    if (rightVarible === 0){speedY = 25}
     
-   
-    
+}
+function lol () {
+    speed = speed * 2
+}
+    document.getElementById ("box").addEventListener(click, "lol")
 </script>
